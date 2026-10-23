@@ -1,0 +1,239 @@
+
+/* =================================
+   FashionStore - Register Page
+   ================================= */
+
+.register-page {
+    min-height: 80vh;
+    padding: 45px 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f5fc;
+}
+
+/* Registration Card */
+
+.register-card {
+    width: 100%;
+    max-width: 760px;
+    padding: 38px;
+    background: #ffffff;
+    border: 1px solid #eee8fa;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(48, 28, 91, 0.08);
+}
+
+/* Heading */
+
+.register-heading {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.register-heading h1 {
+    margin: 0 0 10px;
+    color: #28213a;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.register-heading p {
+    margin: 0;
+    color: #777184;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Error and status messages */
+
+.message {
+    margin-bottom: 22px;
+    padding: 13px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.error-message {
+    color: #a32132;
+    background: #fff0f1;
+    border: 1px solid #f5c5cb;
+}
+
+/* Form Layout */
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.form-row-three {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.form-group {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: #352e44;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Inputs and Textarea */
+
+.form-group input,
+.form-group textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px 13px;
+    color: #292533;
+    background: #ffffff;
+    border: 1px solid #dcd6e7;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.form-group input {
+    min-height: 45px;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #a29bab;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #7545df;
+    box-shadow: 0 0 0 3px rgba(117, 69, 223, 0.12);
+}
+
+/* Register Button */
+
+.register-button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 5px;
+    padding: 13px 20px;
+    color: #ffffff;
+    background: #6c3ce9;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.register-button:hover {
+    background: #5427c7;
+    transform: translateY(-1px);
+}
+
+.register-button:active {
+    transform: translateY(0);
+}
+
+.register-button:focus-visible {
+    outline: 3px solid #b9a2fa;
+    outline-offset: 3px;
+}
+
+/* Login Link */
+
+.login-prompt {
+    margin: 25px 0 0;
+    color: #777184;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.login-prompt a {
+    color: #6c3ce9;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.login-prompt a:hover {
+    text-decoration: underline;
+}
+
+/* Tablet */
+
+@media (max-width: 700px) {
+    .register-page {
+        padding: 30px 16px 45px;
+    }
+
+    .register-card {
+        padding: 28px 22px;
+    }
+
+    .register-heading h1 {
+        font-size: 26px;
+    }
+
+    .form-row-three {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 480px) {
+    .register-page {
+        padding: 22px 12px 35px;
+    }
+
+    .register-card {
+        padding: 24px 17px;
+        border-radius: 12px;
+    }
+
+    .register-heading {
+        margin-bottom: 22px;
+    }
+
+    .register-heading h1 {
+        font-size: 23px;
+    }
+
+    .register-heading p {
+        font-size: 13px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .register-form {
+        gap: 16px;
+    }
+}

@@ -1,0 +1,193 @@
+
+/* =====================================
+   FashionStore - Login Page Styles
+   ===================================== */
+
+/* Login Page Layout */
+.login-page {
+    min-height: 80vh;
+    padding: 45px 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f7f5fc;
+    box-sizing: border-box;
+}
+
+.login-page *,
+.login-page *::before,
+.login-page *::after {
+    box-sizing: border-box;
+}
+
+/* Login Card */
+.login-card {
+    width: 100%;
+    max-width: 460px;
+    padding: 38px;
+    background: #ffffff;
+    border: 1px solid #eee8fa;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(48, 28, 91, 0.08);
+}
+
+/* Heading */
+.login-heading {
+    margin: 0 0 12px;
+    color: #28213a;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.login-subtitle {
+    margin: 0 0 28px;
+    color: #777184;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+/* Error and Success Messages */
+.login-message {
+    margin-bottom: 20px;
+    padding: 13px 15px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.login-message.error {
+    color: #a32132;
+    background: #fff0f1;
+    border-color: #f5c5cb;
+}
+
+.login-message.success {
+    color: #17663a;
+    background: #eaf8ef;
+    border-color: #b9e5c8;
+}
+
+/* Login Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.login-form-group label {
+    color: #352e44;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-form-group input {
+    width: 100%;
+    min-height: 46px;
+    padding: 12px 13px;
+    color: #292533;
+    background: #ffffff;
+    border: 1px solid #dcd6e7;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.login-form-group input::placeholder {
+    color: #a29bab;
+}
+
+.login-form-group input:focus {
+    border-color: #7545df;
+    box-shadow: 0 0 0 3px rgba(117, 69, 223, 0.12);
+}
+
+/* Login Button */
+.login-button {
+    width: 100%;
+    min-height: 48px;
+    margin-top: 4px;
+    padding: 13px 20px;
+    color: #ffffff;
+    background: #6c3ce9;
+    border: none;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s ease,
+                transform 0.2s ease;
+}
+
+.login-button:hover {
+    background: #5427c7;
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.login-button:focus-visible {
+    outline: 3px solid #b9a2fa;
+    outline-offset: 3px;
+}
+
+/* Register Link */
+.login-register {
+    margin: 25px 0 0;
+    color: #777184;
+    font-size: 14px;
+    text-align: center;
+    line-height: 1.7;
+}
+
+.login-register a {
+    color: #6c3ce9;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-register a:hover {
+    text-decoration: underline;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 600px) {
+    .login-page {
+        min-height: 70vh;
+        padding: 30px 16px 40px;
+    }
+
+    .login-card {
+        padding: 28px 22px;
+        border-radius: 12px;
+    }
+
+    .login-heading {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 380px) {
+    .login-card {
+        padding: 24px 17px;
+    }
+
+    .login-heading {
+        font-size: 23px;
+    }
+}

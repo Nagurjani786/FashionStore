@@ -1,0 +1,456 @@
+
+/* =========================================
+   FashionStore - Professional Order Details
+   ========================================= */
+
+.order-page {
+    width: 92%;
+    max-width: 1180px;
+    margin: 36px auto 65px;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.success-banner {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 28px;
+    margin-bottom: 22px;
+    background: #effaf2;
+    border: 1px solid #ccebd5;
+    border-radius: 12px;
+}
+
+.success-check {
+    display: flex;
+    flex: 0 0 58px;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    color: #16834a;
+    background: #d8f3e1;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.success-banner h1 {
+    margin: 0 0 7px;
+    color: #176b3b;
+    font-size: 26px;
+    line-height: 1.3;
+}
+
+.success-banner p {
+    margin: 0;
+    color: #476b54;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Order metadata */
+
+.order-meta-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    padding: 23px 26px;
+    margin-bottom: 24px;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.meta-item > span {
+    color: #777;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+}
+
+.meta-item > strong {
+    color: #222;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+.status-pill {
+    align-self: flex-start;
+    padding: 5px 11px;
+    color: #176b3b !important;
+    background: #e8f7ed;
+    border-radius: 20px;
+    font-size: 12px !important;
+}
+
+/* Main columns */
+
+.order-page-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(300px, 0.85fr);
+    align-items: start;
+    gap: 24px;
+}
+
+.order-products-card,
+.delivery-card,
+.payment-card,
+.price-card {
+    min-width: 0;
+    padding: 24px;
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.025);
+}
+
+.order-products-card h2,
+.delivery-card h2,
+.payment-card h2,
+.price-card h2 {
+    margin: 0 0 20px;
+    color: #222;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+/* Ordered products */
+
+.confirmed-product {
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 17px;
+    padding: 0 0 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.confirmed-product:last-of-type {
+    margin-bottom: 0;
+}
+
+.confirmed-product-image {
+    width: 92px;
+    height: 108px;
+    overflow: hidden;
+    background: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 7px;
+}
+
+.confirmed-product-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.confirmed-product-info {
+    min-width: 0;
+}
+
+.confirmed-product-info h3 {
+    margin: 0 0 7px;
+    color: #222;
+    font-size: 15px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.confirmed-product-info p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.confirmed-product-info p strong {
+    color: #333;
+}
+
+.confirmed-product-info .product-brand {
+    color: #777;
+}
+
+.confirmed-product-total {
+    align-self: start;
+    padding-top: 4px;
+    color: #222;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Delivery note */
+
+.delivery-note {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px;
+    margin-top: 6px;
+    background: #f7f8fc;
+    border-radius: 8px;
+}
+
+.delivery-icon {
+    font-size: 25px;
+}
+
+.delivery-note strong {
+    color: #333;
+    font-size: 13px;
+}
+
+.delivery-note p {
+    margin: 5px 0 0;
+    color: #777;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.empty-items {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Delivery address */
+
+.delivery-card p {
+    margin: 7px 0;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.delivery-card .delivery-name {
+    margin-top: 0;
+    color: #222;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Payment details */
+
+.payment-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.payment-detail:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.payment-detail span {
+    color: #777;
+}
+
+.payment-detail strong {
+    color: #333;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+.payment-detail .payment-pending {
+    color: #805b13;
+}
+
+/* Price details */
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+    margin: 14px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.price-row > span:last-child,
+.price-row > strong:last-child {
+    text-align: right;
+}
+
+.free-delivery {
+    color: #16834a;
+    font-weight: 700;
+}
+
+.price-row.final-price {
+    padding-top: 18px;
+    margin-top: 18px;
+    color: #222;
+    border-top: 1px solid #e5e5e5;
+    font-size: 17px;
+}
+
+.final-price strong:last-child {
+    font-size: 20px;
+}
+
+.price-disclaimer {
+    margin: 14px 0 0;
+    color: #888;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* Action buttons */
+
+.order-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 8px;
+}
+
+.primary-order-button,
+.secondary-order-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 47px;
+    padding: 12px 22px;
+    border: 1px solid #6c4cf1;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.primary-order-button {
+    color: #fff;
+    background: #6c4cf1;
+}
+
+.primary-order-button:hover {
+    color: #fff;
+    background: #5638d5;
+}
+
+.secondary-order-button {
+    color: #6c4cf1;
+    background: #fff;
+}
+
+.secondary-order-button:hover {
+    background: #f4f1ff;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+    .order-page-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .order-side-column {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+        align-items: start;
+    }
+
+    .order-side-column .price-card {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+    .order-page {
+        width: 94%;
+        margin: 22px auto 40px;
+    }
+
+    .success-banner {
+        align-items: flex-start;
+        gap: 13px;
+        padding: 19px 15px;
+    }
+
+    .success-check {
+        flex-basis: 43px;
+        width: 43px;
+        height: 43px;
+        font-size: 23px;
+    }
+
+    .success-banner h1 {
+        font-size: 20px;
+    }
+
+    .success-banner p {
+        font-size: 12px;
+    }
+
+    .order-meta-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+        padding: 19px;
+    }
+
+    .order-products-card,
+    .delivery-card,
+    .payment-card,
+    .price-card {
+        padding: 18px;
+    }
+
+    .confirmed-product {
+        grid-template-columns: 70px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .confirmed-product-image {
+        width: 70px;
+        height: 85px;
+    }
+
+    .confirmed-product-total {
+        grid-column: 2;
+        padding-top: 0;
+        font-size: 14px;
+    }
+
+    .order-side-column {
+        display: block;
+    }
+
+    .order-actions {
+        flex-direction: column;
+    }
+
+    .primary-order-button,
+    .secondary-order-button {
+        width: 100%;
+    }
+}
